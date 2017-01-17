@@ -12,14 +12,16 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var firebase_config_1 = require('./configs/firebase.config');
 var angularfire2_1 = require('angularfire2');
+var ng_bootstrap_1 = require('@ng-bootstrap/ng-bootstrap');
 var app_component_1 = require('./app.component');
+var home_component_1 = require('./core/home/home.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, angularfire2_1.AngularFireModule.initializeApp(firebase_config_1.FirebaseConfig)],
-            declarations: [app_component_1.AppComponent],
+            imports: [platform_browser_1.BrowserModule, angularfire2_1.AngularFireModule.initializeApp(firebase_config_1.FirebaseConfig), ng_bootstrap_1.NgbModule.forRoot()],
+            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

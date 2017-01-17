@@ -9,30 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var angularfire2_1 = require('angularfire2');
-var AppComponent = (function () {
-    function AppComponent(af) {
-        this.af = af;
-        this.name = 'Angular';
+var HomeComponent = (function () {
+    function HomeComponent() {
     }
-    AppComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        // Initialize Firebase
-        var info$ = this.af.database.list('/');
-        info$.subscribe(function (data) { return _this.popData(data); });
-    };
-    AppComponent.prototype.popData = function (data) {
-        this.info = data;
-    };
-    AppComponent = __decorate([
+    HomeComponent.prototype.ngOnInit = function () { };
+    HomeComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'my-app',
-            templateUrl: 'app.component.html'
+            selector: 'app-home',
+            templateUrl: 'home.component.html'
         }), 
-        __metadata('design:paramtypes', [angularfire2_1.AngularFire])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [])
+    ], HomeComponent);
+    return HomeComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.HomeComponent = HomeComponent;
+//# sourceMappingURL=home.component.js.map

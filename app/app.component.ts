@@ -3,8 +3,9 @@ import { Component,OnInit } from '@angular/core';
 import { AngularFire,FirebaseListObservable } from 'angularfire2';
 
 @Component({
+  moduleId: module.id,
   selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1><pre>{{info | json}}</pre>`,
+  templateUrl: 'app.component.html'
 })
 export class AppComponent implements OnInit {
   name = 'Angular';
