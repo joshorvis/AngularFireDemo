@@ -1,7 +1,7 @@
 {
-  "name": "angular-quickstart",
+  "name": "angularfiredemo",
   "version": "1.0.0",
-  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "description": "Following along with a tutorial",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "e2e": "tsc && concurrently \"http-server -s\" \"protractor protractor.config.js\" --kill-others --success first",
@@ -14,8 +14,8 @@
     "tsc:w": "tsc -w"
   },
   "keywords": [],
-  "author": "",
-  "license": "MIT",
+  "author": "NerdyHippie, LLC",
+  "license": "ISC",
   "dependencies": {
     "@angular/common": "~2.4.0",
     "@angular/compiler": "~2.4.0",
@@ -25,18 +25,18 @@
     "@angular/platform-browser": "~2.4.0",
     "@angular/platform-browser-dynamic": "~2.4.0",
     "@angular/router": "~3.4.0",
-
     "angular-in-memory-web-api": "~0.2.4",
-    "systemjs": "0.19.40",
+    "angularfire2": "^2.0.0-beta.7",
     "core-js": "^2.4.1",
+    "firebase": "^3.6.5",
     "rxjs": "5.0.1",
+    "systemjs": "0.19.40",
     "zone.js": "^0.7.4"
   },
   "devDependencies": {
     "concurrently": "^3.1.0",
     "lite-server": "^2.2.2",
     "typescript": "~2.0.10",
-
     "canonical-path": "0.0.2",
     "http-server": "^0.9.0",
     "tslint": "^3.15.1",
@@ -49,9 +49,15 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~4.0.14",
     "rimraf": "^2.5.4",
-
     "@types/node": "^6.0.46",
     "@types/jasmine": "^2.5.36"
   },
-  "repository": {}
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshorvis/AngularFireDemo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joshorvis/AngularFireDemo/issues"
+  },
+  "homepage": "https://github.com/joshorvis/AngularFireDemo#readme"
 }
