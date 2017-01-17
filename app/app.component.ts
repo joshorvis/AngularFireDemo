@@ -16,9 +16,14 @@ export class AppComponent implements OnInit {
   }
   
   ngOnInit() {
-    console.log('inited');
     // Initialize Firebase
-    this.af.database.list('/').subscribe(data => this.info = data);
+    const info$:FirebaseListObservable<any> = this.af.database.list('/');
     
+    info$.subscribe(data => this.popData(data));
+    
+  }
+  
+  popData(data:any) {
+    this.info = data;
   }
 }

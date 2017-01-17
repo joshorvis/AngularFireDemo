@@ -17,9 +17,12 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.ngOnInit = function () {
         var _this = this;
-        console.log('inited');
         // Initialize Firebase
-        this.af.database.list('/').subscribe(function (data) { return _this.info = data; });
+        var info$ = this.af.database.list('/');
+        info$.subscribe(function (data) { return _this.popData(data); });
+    };
+    AppComponent.prototype.popData = function (data) {
+        this.info = data;
     };
     AppComponent = __decorate([
         core_1.Component({
